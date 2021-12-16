@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Bank</title>
+    <link rel="stylesheet" href="/main.css" />
+    <script src="/main.js"></script>
 </head>
 <body>
-    
+    <!-- 네이티브 -->
+    <div class="native"></div>
+
+    <!-- 네비게이션 -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0)" class="home"></a></li>
+            <li><a href="javascript:void(0)" class="back"></a></li>
+            <li><a href="javascript:void(0)" class="message"></a></li>
+            <li><a href="javascript:void(0)" class="more"></a></li>
+        </ul>
+    </nav>
+
+    <!-- 홈화면 -->
+    <main>
+        <section>
+            <!-- 계좌관리 -->
+            <div class="account">
+                <header class="account__header">
+                    <h2>생활비</h2>
+                    <div class="icons">
+                        <img src="" alt="profile" />
+                        <img src="" alt="QR" />
+                        <img src="" alt="search" />
+                    </div>
+                </header>
+
+                <!-- 계좌정보 -->
+                <div class="account__main">
+                    <div class="account__main__infor">
+                        <span class="account-num"></span>
+                        <strong class="balance"></strong>
+                    </div>
+                    <div class="account__main__controll">
+                        <div class="controller"></div>
+                        <span class="warning"></span>
+                        <img src="" alt="" class="chart"/>
+                    </div>
+                    <a href="javascript:void(0)" class="account__main__transfer">이체</a>
+                </div>
+
+                <!-- 광고 -->
+                <aside class="account__ad">
+                    <p></p>
+                    <a href="javascript:void(0)" class="account__ad__more">Go</a>
+                </aside>
+            </div>
+
+            <!-- 잔액관리 -->
+            <div class="contents">
+
+                <!-- 저금통 -->
+                <div class="contents__money-box">
+                    <ul class="contents__money-box__list">
+                        <li></li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0)" class="contents__money-box__add"></a>
+
+                <!-- 입출금 내역 -->
+                <div class="contents__history">
+                    <ul class="contents__history__days">
+                        <strong class="date"></strong>
+                        <span class="total-spending"></span>
+                        <ul class="contents__history__day__detail"></ul>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
