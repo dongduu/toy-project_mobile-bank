@@ -1,0 +1,164 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-decoration: none;
+	list-style: none;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.wrap {
+	width: 375px;
+	height: 812px;
+	border: 1px solid red;
+	position: relative;
+}
+
+/* 네이티브 */
+.native {
+	height: 44px;
+	border: 1px solid greenyellow;
+}
+
+/* 네비게이션 */
+nav {
+	width: inherit;
+	height: 76px;
+	border: 1px solid black;
+	position: absolute;
+	bottom: 0;
+}
+nav > a {
+	border: 1px solid black;
+	display: inline-block;
+}
+
+/* 홈화면 */
+main {
+	width: 375px;
+	height: 680px;
+	border: 1px solid blue;
+}
+main > section {
+
+}
+
+/* 계좌관리*/
+.account {
+	border: 1px solid blue;
+}
+.account .account__header {
+	width: 327px;
+	height: 43px;
+	border: 1px solid black;
+	margin: auto;
+}
+.account .account__header h2 {
+	text-align: center;
+}
+.account .account__header .icons {
+
+}
+.account .account__header .icons .profile {
+
+}
+.account .account__header .icons .QR {
+
+}
+.account .account__header .icons .search {
+
+}
+
+/* 계좌정보 */
+.account .account__infor {
+	border: 1px solid blue;	
+	
+}
+
+/* 계좌번호 및 잔액 */
+.account .account__infor .account__infor-total {
+	border: 1px solid orange;
+	width: 279px;
+	height: 155px;
+	margin: auto;
+}
+.account .account__infor .account__infor-total .account__infor-box {
+	border: 1px solid red;
+}
+.account .account__infor .account__infor-total .account__infor-box .account-num {
+	text-align: center;
+}
+.account .account__infor .account__infor-total .account__infor-box .balance {
+	text-align: center;
+}
+
+/* 조절바 */
+.account .account__infor .account__infor__controll {
+	border: 1px solid red;
+	position: relative;
+}
+.account .account__infor .account__infor__controll .controller {
+    width: 202px;
+	height: 17px;
+	border: 1px solid black;
+	margin: auto;
+}
+.account .account__infor .account__infor__controll .warning {
+    text-align: center;
+}
+.account .account__infor .account__infor__controll .chart {
+    
+}
+.account .account__infor .account__infor__transfer {
+    
+}
+
+/* 조절바 div 태그 */
+
+
+/* 광고 */
+.account .account__ad {
+	border: 1px solid orange;
+	text-align: center;
+}
+.account .account__ad p {
+
+}
+.account .account__ad p > span {
+
+}
+
+/* 잔액관리 */
+.contents {
+	border: 1px solid hotpink;
+}
+
+/* 저금통 */
+.contents .contents__money-box {
+    
+}
+.contents .contents__money-box .contents__money-box__list {
+    
+}
+.contents .contents__money-box .contents__money-box__add {
+    
+}
+
+/* 입출금내역 */
+.contents .contents__history {
+
+}
+.contents .contents__history .contents__history__days {
+    
+}
+.contents .contents__history .contents__history__days strong {
+    
+}
+.contents .contents__history .contents__history__days p {
+    
+}
+.contents .contents__history .contents__history__days .contents__history__day__detail {
+    
+}

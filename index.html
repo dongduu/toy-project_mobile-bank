@@ -1,83 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mobile Bank</title>
-    <link rel="stylesheet" href="/main.css" />
-    <script src="/main.js"></script>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mobile Bank</title>
+	<link rel="stylesheet" href="main.css" />
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" /> -->
+	<script src="/main.js"></script>
 </head>
 <body>
-    <!-- 네이티브 -->
-    <div class="native"></div>
+<div class="wrap">
+	<!-- 네이티브 -->
+	<div class="native"></div>
 
-    <!-- 네비게이션 -->
-    <nav>
-        <ul>
-            <li><a href="javascript:void(0)" class="home"></a></li>
-            <li><a href="javascript:void(0)" class="back"></a></li>
-            <li><a href="javascript:void(0)" class="message"></a></li>
-            <li><a href="javascript:void(0)" class="more"></a></li>
-        </ul>
-    </nav>
+	<!-- 네비게이션 -->
+	<nav>
+		<a href="javascript:void(0)" class="home">home</a>
+		<a href="javascript:void(0)" class="back">back</a>
+		<a href="javascript:void(0)" class="message">massage</a>
+		<a href="javascript:void(0)" class="more">more</a>
+	</nav>
 
-    <!-- 홈화면 -->
-    <main>
-        <section>
-            <!-- 계좌관리 -->
-            <div class="account">
-                <header class="account__header">
-                    <h2>생활비</h2>
-                    <div class="icons">
-                        <img src="" alt="profile" />
-                        <img src="" alt="QR" />
-                        <img src="" alt="search" />
-                    </div>
-                </header>
+	<!-- 홈화면 -->
+	<main>
+			<section>
+					<!-- 계좌관리 -->
+					<div class="account">
+							<header class="account__header">
+									<h2>생활비</h2>
+									<div class="icons">
+											<img src="" alt="profile" />
+											<img src="" alt="QR" />
+											<img src="" alt="search" />
+									</div>
+							</header>
 
-                <!-- 계좌정보 -->
-                <div class="account__main">
-                    <div class="account__main__infor">
-                        <span class="account-num"></span>
-                        <strong class="balance"></strong>
-                    </div>
-                    <div class="account__main__controll">
-                        <div class="controller"></div>
-                        <span class="warning"></span>
-                        <img src="" alt="" class="chart"/>
-                    </div>
-                    <a href="javascript:void(0)" class="account__main__transfer">이체</a>
-                </div>
+							<!-- 계좌정보 -->
+							<div class="account__infor">
 
-                <!-- 광고 -->
-                <aside class="account__ad">
-                    <p></p>
-                    <a href="javascript:void(0)" class="account__ad__more">Go</a>
-                </aside>
-            </div>
+								<!-- 계좌번호 및 잔액 -->
+								<div class="account__infor-total">
+									<div class="account__infor-box">
+										<p class="account-num">0</p>
+										<p class="balance">
+												<strong>0</strong>
+												<span>원</span>
+										</p>
+									</div>
+									
 
-            <!-- 잔액관리 -->
-            <div class="contents">
+									<!-- 조절바 -->
+									<div class="account__infor__controll">
+											<div class="controller">
+													<!-- 조절바 div 태그 -->
+											</div>
+											<div class="warning">
+													<p><span class="rest_day">0</span>일 동안 <span class="rest_balance">0</span>원 남음</p>
+											</div>
+											<img src="" alt="차트" class="chart"/>
+									</div>
+									<a href="javascript:void(0)" class="account__infor__transfer">이체</a>
+								</div>
+							</div>
 
-                <!-- 저금통 -->
-                <div class="contents__money-box">
-                    <ul class="contents__money-box__list">
-                        <li></li>
-                    </ul>
-                </div>
-                <a href="javascript:void(0)" class="contents__money-box__add"></a>
+							<!-- 광고 -->
+							<aside class="account__ad">
+									<p>지금 낮은 이자로 <span class="excess_amount">0</span>만원을 신청하세요!<a href="javascript:void(0)" class="account__ad__more">Go</a></p>
+							</aside>
+					</div>
 
-                <!-- 입출금 내역 -->
-                <div class="contents__history">
-                    <ul class="contents__history__days">
-                        <strong class="date"></strong>
-                        <span class="total-spending"></span>
-                        <ul class="contents__history__day__detail"></ul>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
+					<!-- 잔액관리 -->
+					<div class="contents">
+
+							<!-- 저금통 -->
+							<div class="contents__money-box">
+									<ul class="contents__money-box__list">
+											<li>
+													<!-- 
+													<div class="goal">
+															<div class="current__account"></div>
+													</div>
+													<p><span class="money-box__name"></span><span class="money-box__goal-account">0</span></p> -->
+											</li>
+									</ul>
+									<a href="javascript:void(0)" class="contents__money-box__add"></a>
+							</div>
+
+							<!-- 입출금 내역 -->
+							<div class="contents__history">
+									<ul class="contents__history__days">
+											<strong class="date"></strong>
+											<p><span class="total-spending">0</span>원 지출</p>
+											<ul class="contents__history__day__detail">
+													<li></li>
+											</ul>
+									</ul>
+							</div>
+					</div>
+			</section>
+	</main>
+</div>
 </body>
 </html>
