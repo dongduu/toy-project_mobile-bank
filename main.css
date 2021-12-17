@@ -57,32 +57,37 @@ main > section {
 
 /* 계좌관리*/
 .account {
-	border: 1px solid blue;
+	
 }
 .account .account__header {
 	width: 327px;
 	height: 43px;
-	border: 1px solid black;
 	margin: auto;
+	position: relative;
 }
 .account .account__header h2 {
 	text-align: center;
+	padding: 8px;
 	font-size: 18px;
 }
-.account .account__header .icons {
-
-}
-.account .account__header .icons .profile {
-	width: 43px;
-	height: 43px;
+.account .account__header .profile {
+	width: 42px;
+	height: 42px;
 	border-radius: 50%;
 	border: solid #DCCDB6 1px;
+	position: absolute;
+	left: 0px;
+	top: 0;
 }
-.account .account__header .icons .QR {
-
+.account .account__header .QR {
+	position: absolute;
+	right: 42px;
+	top: 9px;
 }
-.account .account__header .icons .search {
-
+.account .account__header .search {
+	position: absolute;
+	right: 0;
+	top: 9px;
 }
 
 /* 계좌정보 */
@@ -99,9 +104,11 @@ main > section {
 	margin: auto;
 	background-color: #FFF;
 	border-radius: 12px;
+	margin-top: 33px;
+	position: relative;
 }
 .account .account__infor .account__infor-total .account__infor-box {
-	border: 1px solid red;
+	
 }
 .account .account__infor .account__infor-total .account__infor-box .account-num {
 	text-align: center;
@@ -113,7 +120,7 @@ main > section {
 /* 조절바 */
 .account .account__infor .account__infor__controll {
 	border: 1px solid red;
-	position: relative;
+	
 }
 .account .account__infor .account__infor__controll .controller {
     width: 202px;
@@ -125,7 +132,9 @@ main > section {
     text-align: center;
 }
 .account .account__infor .account__infor__controll .chart {
-    
+    position: absolute;
+	bottom: 33px;
+	right: 14px;
 }
 .account .account__infor .account__infor__transfer {
     
@@ -138,12 +147,17 @@ main > section {
 .account .account__ad {
 	border: 1px solid orange;
 	text-align: center;
+	margin-top: 24px;
+	margin-bottom: 21px;
 }
 .account .account__ad p {
 
 }
 .account .account__ad p > span {
-
+	
+}
+.account .account__ad p > a {
+	margin-left: 6px;
 }
 
 /* 잔액관리 */
