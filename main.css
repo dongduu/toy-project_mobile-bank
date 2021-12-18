@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@300;500;700&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,13 +9,16 @@
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family: ;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-style: normal;
+}
+body {
+	background-color: aliceblue;
 }
 
 .wrap {
 	width: 375px;
 	height: 812px;
-	border: 1px solid red;
 	position: relative;
 	background-color: #EEEBE5;
 }
@@ -21,7 +26,6 @@
 /* 네이티브 */
 .native {
 	height: 44px;
-	border: 1px solid greenyellow;
 }
 
 /* 네비게이션 */
@@ -49,7 +53,6 @@ nav > a > img {
 main {
 	width: 375px;
 	height: 680px;
-	border: 1px solid blue;
 }
 main > section {
 
@@ -69,6 +72,9 @@ main > section {
 	text-align: center;
 	padding: 8px;
 	font-size: 18px;
+	font-weight: 500;
+	line-height: 27px;
+	letter-spacing: -0.24px;
 }
 .account .account__header .profile {
 	width: 42px;
@@ -91,14 +97,12 @@ main > section {
 }
 
 /* 계좌정보 */
-.account .account__infor {
-	border: 1px solid blue;	
+.account .account__infor {	
 	
 }
 
 /* 계좌번호 및 잔액 */
 .account .account__infor .account__infor-total {
-	border: 1px solid orange;
 	width: 279px;
 	height: 155px;
 	margin: auto;
@@ -112,14 +116,22 @@ main > section {
 }
 .account .account__infor .account__infor-total .account__infor-box .account-num {
 	text-align: center;
+	font-weight: 500;
+	color: #858585;
+	padding-top: 14px;
 }
 .account .account__infor .account__infor-total .account__infor-box .balance {
 	text-align: center;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: 2px;
+	margin-top: 16px;
 }
 
 /* 조절바 */
 .account .account__infor .account__infor__controll {
-	border: 1px solid red;
+	position: relative;
 	
 }
 .account .account__infor .account__infor__controll .controller {
@@ -130,6 +142,9 @@ main > section {
 }
 .account .account__infor .account__infor__controll .warning {
     text-align: center;
+	font-weight: 500;
+	color: #858585;
+	margin-top: 8px;
 }
 .account .account__infor .account__infor__controll .chart {
     position: absolute;
@@ -137,7 +152,11 @@ main > section {
 	right: 14px;
 }
 .account .account__infor .account__infor__transfer {
-    
+    position: absolute;
+	top: 14px;
+	right: 17px;
+	font-weight: 500;
+	color: #000000;
 }
 
 /* 조절바 div 태그 */
@@ -145,19 +164,22 @@ main > section {
 
 /* 광고 */
 .account .account__ad {
-	border: 1px solid orange;
-	text-align: center;
+	margin-left: 42px;
 	margin-top: 24px;
 	margin-bottom: 21px;
-}
-.account .account__ad p {
-
+	font-size: 14px;
+	line-height: 21px;
 }
 .account .account__ad p > span {
-	
+
 }
 .account .account__ad p > a {
 	margin-left: 6px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 21px;
+	text-decoration-line: underline;
+	color: #000000;
 }
 
 /* 잔액관리 */
@@ -166,7 +188,7 @@ main > section {
 	border-radius: 30px 30px 0 0;
 }
 .contents {
-	border: 1px solid hotpink;
+	/* border: 1px solid hotpink; */
 }
 
 /* 저금통 */
@@ -182,7 +204,7 @@ main > section {
 
 /* 입출금내역 */
 .contents .contents__history {
-
+	height: 395px;
 }
 .contents .contents__history .contents__history__days {
     
