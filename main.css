@@ -21,6 +21,7 @@ body {
 	height: 812px;
 	position: relative;
 	background-color: #EEEBE5;
+	overflow: hidden;
 }
 
 /* 네이티브 */
@@ -193,13 +194,51 @@ main > section {
 
 /* 저금통 */
 .contents .contents__money-box {
-    
 }
 .contents .contents__money-box .contents__money-box__list {
-    
+}
+.contents .contents__money-box .contents__money-box__list li {
+	display: flex;
+}
+.contents .contents__money-box .contents__money-box__list .goal {
+	width: 162px;
+	height: 47px;
+	margin-right: 13px;
+	border-radius: 6px;
+	background-color: #DADADA;
+	margin-top: 25px;
+	margin-bottom: 17px;
+}
+.contents .contents__money-box .contents__money-box__list .goal:first-child {
+	margin-left: 30px;
+}
+.contents .contents__money-box .contents__money-box__list .goal:last-child {
+	margin-right: 19px;
+}
+.contents .contents__money-box .contents__money-box__list .goal .current__account {
+	width: 97px;
+	height: 47px;
+	border-radius: 6px;
+	background-color: #FF5F00;
+	position: relative;
+}
+.contents .contents__money-box .contents__money-box__list .goal .current__account .money-box__title {
+    font-weight: 500;
+	font-size: 12px;
+	line-height: 18px;
+	color: #FFF;
+	position: absolute;
+}
+.contents .contents__money-box .contents__money-box__list .goal .current__account .money-box__title.name{
+	top: 5px;
+	left: 13px;
+}
+.contents .contents__money-box .contents__money-box__list .goal .current__account .money-box__title.goal-account {
+	bottom: 7px;
+	left: 13px;
 }
 .contents .contents__money-box .contents__money-box__add {
-    
+    border: 1px solid purple;
 }
 
 /* 입출금내역 */
