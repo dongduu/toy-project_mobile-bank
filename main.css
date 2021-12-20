@@ -244,16 +244,11 @@ main > section {
 /* 입출금내역 */
 .contents .contents__history {
 	height: 395px;
+	border: red solid 1px;
 }
 .contents .contents__history .contents__history__days {
-    
+    border: springgreen solid 1px;
 }
-.contents .contents__history .contents__history__days strong {
-    
-}
-.contents .contents__history .contents__history__days p {
-    
-}
-.contents .contents__history .contents__history__days .contents__history__day__detail {
-    
+.contents .contents__history .contents__history__days li {
+    border: springgreen solid 1px;
 }
