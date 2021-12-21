@@ -21,12 +21,13 @@ body {
 	height: 812px;
 	position: relative;
 	background-color: #EEEBE5;
-	overflow: hidden;
 }
 
 /* 네이티브 */
 .native {
 	height: 44px;
+	margin-bottom: 12px;
+	background-color: #B4B4B4;
 }
 
 /* 네비게이션 */
@@ -54,6 +55,7 @@ nav > a > img {
 main {
 	width: 375px;
 	height: 680px;
+	overflow: hidden;
 }
 main > section {
 
@@ -138,8 +140,33 @@ main > section {
 .account .account__infor .account__infor__controll .controller {
     width: 202px;
 	height: 17px;
-	border: 1px solid black;
+	border: 1px solid #fff;
 	margin: auto;
+	position: relative;
+}
+.account .account__infor .account__infor__controll .controller .total__bar {
+	width: 202px;
+	height: 6px;
+	background: #C4C4C4;
+	border-radius: 3px;
+	margin-top: 7px;
+}
+.account .account__infor .account__infor__controll .controller .spand__bar {
+	background: #FFDB4C;
+	border-radius: 3px 0px 0px 3px;
+	width: 128px;
+	height: 6px;
+	position: absolute;
+	bottom: 4px;
+}
+.account .account__infor .account__infor__controll .controller .standard {
+	position: absolute;
+	width: 4px;
+	height: 17px;
+	background: #FF5F00;
+	border-radius: 2px;
+	top: 0px;
+	right: 53px;
 }
 .account .account__infor .account__infor__controll .warning {
     text-align: center;
@@ -187,6 +214,7 @@ main > section {
 .content {
 	background-color: #FFF;
 	border-radius: 30px 30px 0 0;
+	/* height: 400px; */
 }
 .contents {
 	/* border: 1px solid hotpink; */
@@ -194,6 +222,7 @@ main > section {
 
 /* 저금통 */
 .contents .contents__money-box {
+	position: relative;
 }
 .contents .contents__money-box .contents__money-box__list {
 }
@@ -207,7 +236,7 @@ main > section {
 	border-radius: 6px;
 	background-color: #DADADA;
 	margin-top: 25px;
-	margin-bottom: 17px;
+	margin-bottom: 16px;
 }
 .contents .contents__money-box .contents__money-box__list .goal:first-child {
 	margin-left: 30px;
@@ -237,18 +266,59 @@ main > section {
 	bottom: 7px;
 	left: 13px;
 }
-.contents .contents__money-box .contents__money-box__add {
+/* .contents .contents__money-box .contents__money-box__add {
     border: 1px solid purple;
-}
+	position: absolute;
+	right: 0px;
+	bottom: 12px;
+} */
 
 /* 입출금내역 */
 .contents .contents__history {
-	height: 395px;
-	border: red solid 1px;
+	
 }
 .contents .contents__history .contents__history__days {
-    border: springgreen solid 1px;
+
 }
 .contents .contents__history .contents__history__days li {
-    border: springgreen solid 1px;
+	margin: 0px 36px 36px 38px;
+}
+.contents .contents__history .contents__history__days li .title {
+	position: relative;
+	margin-bottom: 8px;
+}
+.contents .contents__history .contents__history__days li .title .contents_day {
+	font-weight: bold;
+	line-height: 21px;
+	font-size: 14px;
+}
+.contents .contents__history .contents__history__days li .title .contents_sum {
+	font-weight: 500;
+	line-height: 21px;
+	font-size: 14px;
+	color: #B4B4B4;
+	position: absolute;
+	right: 0;
+	top: 3px;
+}
+.contents .contents__history .contents__history__days li .history_content {
+	position: relative;
+	border-bottom: 1px solid #DCDCDC;
+	margin-bottom: 8px;
+	padding-bottom: 7px;
+}
+.contents .contents__history .contents__history__days li .history_content .history_contents {
+	font-weight: 350;
+	font-size: 18px;
+	line-height: 27px;
+	color: #444;
+}
+.contents .contents__history .contents__history__days li .history_content .price_contents {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 27px;
+	text-align: right;
+	color: #444;
+	position: absolute;
+	right: 0;
 }
