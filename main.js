@@ -1,5 +1,4 @@
-const ul_history = document.querySelector('.contents__history__days');
-
+// 입출금 내역 불러오기
 fetch("https://gyoheonlee.github.io/mobile-bank/data/bank.json")
     .then(res => res.json())
     .then(myjson => {printContents(myjson)});
@@ -61,6 +60,67 @@ function printContents (myjson) {
 
             nextLiElem.childNodes[0].children[1].innerHTML = `${totalSum} 원 지출`;
             totalSum = 0;
+        }
+    }
+}
+
+// 슬라이더
+new Swiper('.wrap .swiper-container', {
+    direction: 'vertical',
+    slidePerView: 2
+});
+
+// 올림 버튼
+let _slide = document.getElementById("account_");
+function slide_btn() {
+    if(_slide.style.display == 'block') {
+        _slide.style.display = 'none';
+    } else {
+        _slide.style.display = 'block';
+    }
+}
+
+// 화면 슬라이드
+const kindWrap = document.querySelector('.wrap');
+const slider = kindWrap.querySelector('.swiper-container');
+const slideLis = slider.querySelector('.swiper-wrapper');
+const moveBtn = document.querySelector('.arrow_btn');
+let moveDist = 0; // 움직일 거리를 숫자로 보관함
+let currentNum = 0; // 현재 슬라이드 번호를 기록함.
+
+const liWidth = slideLis.clientWidth;
+const sliderWidth = liWidth * slideLis.length;
+slider.style.width = sliderWidth + 'px'; 
+
+slider.style.left = '0';
+
+moveBtn.addEventListener('click', moveSlide);
+
+function moveSlide (e) {
+    e.preventDefault();
+    slider.style.transition = 'all 500ms ease';
+    console.log(e.target.className);
+    if (e.target.className === 'next') {
+        if (currentNum === slideLis.length - 1) {
+            currentNum = 0;
+            moveDist = 0;
+            slider.style.left = moveDist + 'px';
+        } else {
+            currentNum++;
+            moveDist += -liWidth;
+            slider.style.left = moveDist + 'px';
+        }
+    } else {
+        if (currentNum === 0) { // 처음이면
+            currentNum = slideLis.length - 1; // 마지막번호
+            moveDist = - (liWidth * currentNum); // 마지막위치
+            slider.style.left = moveDist + 'px';
+            console.log(currentNum);
+        } else {
+            currentNum--; // 숫자를 업데이트 한다.
+            moveDist += liWidth;
+            slider.style.left = moveDist + 'px';
+            console.log(currentNum);
         }
     }
 }

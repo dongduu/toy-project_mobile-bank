@@ -5,7 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Mobile Bank</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 	<link rel="stylesheet" href="main.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+	
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" /> -->
 	<script defer src="./main.js"></script>
 </head>
@@ -24,88 +28,142 @@
 
 	<!-- 홈화면 -->
 	<main>
-		<section class="account_1">
-			<!-- 계좌관리 -->
-			<div class="account">
-				<header class="account__header">
-					<h2>생활비</h2>
-					<a href="javascript:void(0)"><img src="./image/header_profile.jpg" alt="profile" class="profile "/></a>
-					<a href="javascript:void(0)"><img src="./image/header_qr.png" alt="QR" class="QR" /></a>
-					<a href="javascript:void(0)"><img src="./image/header_search.png" alt="search" class="search"/></a>
-				</header>
+		<ul class="swiper-container">
+			<!-- 섹션1 -->
+			<li class="swiper-wrapper">
 
-				<!-- 계좌정보 -->
-				<div class="account__infor">
+				<!-- 계좌관리 -->
+				<section>
+				<div class="account">
+					<header class="account__header">
+						<h2>생활비</h2>
+						<a href="javascript:void(0)"><img src="./image/header_profile.jpg" alt="profile" class="profile "/></a>
+						<a href="javascript:void(0)"><img src="./image/header_qr.png" alt="QR" class="QR" /></a>
+						<a href="javascript:void(0)"><img src="./image/header_search.png" alt="search" class="search"/></a>
+					</header>
 
-					<!-- 계좌번호 및 잔액 -->
-					<div class="account__infor-total">
-						<div class="account__infor-box">
-							<p class="account-num">0</p>
-							<p class="balance">
-								<strong>0</strong>
-								<span>원</span>
-							</p>
-						</div>
-						
+					<div id="account_">
+						<!-- 계좌정보 -->
+						<div class="account__infor">
 
-						<!-- 조절바 -->
-						<div class="account__infor__controll">
-							<div class="controller">
-								<!-- 조절바 div 태그 -->
-								<div class="total__bar"></div>
-								<div class="spand__bar"></div>
-								<div class="standard"></div>
+							<!-- 계좌번호 및 잔액 -->
+							<div class="account__infor-total">
+								<div class="account__infor-box">
+									<p class="account-num">0</p>
+									<p class="balance">
+										<strong>0</strong>
+										<span>원</span>
+									</p>
+								</div>
+								
+
+								<!-- 조절바 -->
+								<div class="account__infor__controll">
+									<div class="controller">
+										<!-- 조절바 div 태그 -->
+										<div class="total__bar"></div>
+										<div class="spand__bar"></div>
+										<div class="standard"></div>
+									</div>
+									<div class="warning">
+										<p><span class="rest_day">0</span>일 동안 <span class="rest_balance">0</span>원 남음</p>
+									</div>
+									<img src="./image/controller_chartbar.png" alt="차트" class="chart"/>
+								</div>
+								<a href="javascript:void(0)" class="account__infor__transfer">이체</a>
 							</div>
-							<div class="warning">
-								<p><span class="rest_day">0</span>일 동안 <span class="rest_balance">0</span>원 남음</p>
-							</div>
-							<img src="./image/controller_chartbar.png" alt="차트" class="chart"/>
 						</div>
-						<a href="javascript:void(0)" class="account__infor__transfer">이체</a>
+
+						<!-- 광고 -->
+						<aside class="account__ad">
+							<p>지금 낮은 이자로 <span class="excess_amount">0</span>만원을 신청하세요!<a href="javascript:void(0)" class="account__ad__more">Go</a></p>
+						</aside>
+					</div>
+					<!--히스토리  -->
+					<div class="content swiper-slide">
+
+						<!-- 잔액관리 -->
+						<div class="contents">
+							<button class="btn__slide" onclick="slide_btn()"></button>
+							<!-- 저금통 -->
+							<div class="contents__money-box">
+								<ul class="contents__money-box__list">	
+									<li>
+										<div class="goal">
+											<div class="current__account">
+												<span class="money-box__title name">___</span>
+												<span class="money-box__title goal-account">0<span>원</span></span>
+											</div>
+										</div>
+
+										<div class="goal">
+											<div class="current__account">
+												<span class="money-box__title name">___</span>
+												<span class="money-box__title goal-account">0<span>원</span></span>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<!-- <a href="javascript:void(0)"><img src="./image/money-box_add.png" alt="" class="contents__money-box__add"></a> -->
+							</div>
+
+							<!-- 입출금 내역 -->
+							<div class="contents__history swiper-slide">
+								<ul class="contents__history__days">
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
+			
+				<!--히스토리  -->
+				<div class="content swiper-slide ">
 
-				<!-- 광고 -->
-				<aside class="account__ad">
-					<p>지금 낮은 이자로 <span class="excess_amount">0</span>만원을 신청하세요!<a href="javascript:void(0)" class="account__ad__more">Go</a></p>
-				</aside>
-			</div>
-		</section>
+					<!-- 잔액관리 -->
+					<div class="contents">
+						<button class="btn__slide" onclick="slide_btn()"></button>
 
-		<section class="content">
-			<!-- 잔액관리 -->
-			<div class="contents">
-
-				<!-- 저금통 -->
-				<div class="contents__money-box">
-					<ul class="contents__money-box__list">
-						<li>
-							<div class="goal">
-								<div class="current__account">
-									<span class="money-box__title name">___</span>
-									<span class="money-box__title goal-account">0<span>원</span></span>
-								</div>
-							</div>
-
-							<div class="goal">
-								<div class="current__account">
-									<span class="money-box__title name">___</span>
-									<span class="money-box__title goal-account">0<span>원</span></span>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<!-- <a href="javascript:void(0)"><img src="./image/money-box_add.png" alt="" class="contents__money-box__add"></a> -->
+						<!-- 입출금 내역 -->
+						<div class="contents__history ">
+							<ul class="contents__history__days ">
+							</ul>
+						</div>
+					</div>
 				</div>
+			</section>
+			</li>
+			
 
-				<!-- 입출금 내역 -->
-				<div class="contents__history">
-					<ul class="contents__history__days">
-					</ul>
+			<!-- 섹션2 -->
+			<li class="swiper-wrapper"></li>
+
+			<!-- 섹션3  -->
+			<li class="swiper-wrapper">
+				<div class="content swiper-slide">
+
+					<!-- 잔액관리 -->
+					<div class="contents ">
+						<button class="btn__slide" onclick="slide_btn()"></button>
+
+						<!-- 입출금 내역 -->
+						<div class="contents__history">
+							<ul class="contents__history__days">
+							</ul>
+						</div>
+					</div>
 				</div>
-			</div>
-		</section>
-	</main>
+			</li>
+
+		</ul>
+		<div class="arrow">
+			<a href="" class="prev">
+				<div class="material-icons arrow_btn">arrow_back</div>
+			</a>
+			<a href="" class="next">
+				<div class="material-icons arrow_btn">arrow_forward</div>
+			</a>
+		</div>
+</main>
 </div>
 </body>
 </html>

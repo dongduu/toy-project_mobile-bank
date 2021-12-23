@@ -16,11 +16,17 @@ body {
 	background-color: aliceblue;
 }
 
+main {
+	position: relative;
+}
+.hidden {
+	display: none;
+}
 .wrap {
 	width: 375px;
 	height: 812px;
-	position: relative;
 	background-color: #EEEBE5;
+	overflow: hidden;
 }
 
 /* 네이티브 */
@@ -32,6 +38,7 @@ body {
 
 /* 네비게이션 */
 nav {
+	z-index: 3;
 	width: inherit;
 	height: 76px;
 	position: absolute;
@@ -52,26 +59,23 @@ nav > a > img {
 }
 
 /* 홈화면 */
-main {
+.wrap > ul {
 	width: 375px;
 	height: 680px;
-	overflow: hidden;
+	position: relative;
 }
-main > section {
-
+.wrap > ul > li {
+	float: left;
 }
 
 /* 계좌관리*/
-.account {
-	
-}
-.account .account__header {
+.account__header {
 	width: 327px;
 	height: 43px;
 	margin: auto;
 	position: relative;
 }
-.account .account__header h2 {
+.account__header h2 {
 	text-align: center;
 	padding: 8px;
 	font-size: 18px;
@@ -79,7 +83,7 @@ main > section {
 	line-height: 27px;
 	letter-spacing: -0.24px;
 }
-.account .account__header .profile {
+.account__header .profile {
 	width: 42px;
 	height: 42px;
 	border-radius: 50%;
@@ -88,12 +92,12 @@ main > section {
 	left: 0px;
 	top: 0;
 }
-.account .account__header .QR {
+.account__header .QR {
 	position: absolute;
 	right: 42px;
 	top: 9px;
 }
-.account .account__header .search {
+.account__header .search {
 	position: absolute;
 	right: 0;
 	top: 9px;
@@ -214,10 +218,23 @@ main > section {
 .content {
 	background-color: #FFF;
 	border-radius: 30px 30px 0 0;
+	
 	/* height: 400px; */
 }
 .contents {
 	/* border: 1px solid hotpink; */
+	position: relative;
+}
+.contents .btn__slide {
+	background: #C4C4C4;
+	border-radius: 4px;
+	width: 48px;
+	height: 2.15px;
+	position: absolute;
+	top: 4.3px;
+	left: 162px;
+	cursor: pointer;
+	z-index: 1;
 }
 
 /* 저금통 */
@@ -322,3 +339,20 @@ main > section {
 	position: absolute;
 	right: 0;
 }
+.material-icons {
+	color: #858585;
+}
+.arrow > .prev {
+	position: absolute; 
+	left:5px; 
+	top:100px;
+	z-index: 10;
+}
+.arrow > .next {
+	position: absolute; 
+	right:5px; 
+	top:100px;
+	z-index: 10;
+}
+
+/* 입출금내역 슬라이더 */
