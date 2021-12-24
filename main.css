@@ -15,18 +15,29 @@
 body {
 	background-color: aliceblue;
 }
-
-main {
-	position: relative;
-}
-.hidden {
-	display: none;
-}
 .wrap {
 	width: 375px;
 	height: 812px;
 	background-color: #EEEBE5;
+	position: relative;
+	/* overflow: hidden; */
+}
+main {
+	position: relative;
+	height: 680px;
 	overflow: hidden;
+	width: 375px;
+}
+main section:nth-child(2) {
+	position: absolute;
+	left: 375px;
+}
+.hidden {
+	display: none;
+}
+section {
+	position: absolute;
+	transition: 1s ease;
 }
 
 /* 네이티브 */
@@ -69,6 +80,9 @@ nav > a > img {
 }
 
 /* 계좌관리*/
+#account_ {
+	transition: 1s ease;
+}
 .account__header {
 	width: 327px;
 	height: 43px;
@@ -101,11 +115,6 @@ nav > a > img {
 	position: absolute;
 	right: 0;
 	top: 9px;
-}
-
-/* 계좌정보 */
-.account .account__infor {	
-	
 }
 
 /* 계좌번호 및 잔액 */
@@ -191,9 +200,6 @@ nav > a > img {
 	color: #000000;
 }
 
-/* 조절바 div 태그 */
-
-
 /* 광고 */
 .account .account__ad {
 	margin-left: 42px;
@@ -218,12 +224,14 @@ nav > a > img {
 .content {
 	background-color: #FFF;
 	border-radius: 30px 30px 0 0;
-	
-	/* height: 400px; */
+	transition: 
+		display 2s;
 }
 .contents {
-	/* border: 1px solid hotpink; */
 	position: relative;
+	transition: 1s ease;
+	transition: 
+		display 2s;
 }
 .contents .btn__slide {
 	background: #C4C4C4;
@@ -283,12 +291,6 @@ nav > a > img {
 	bottom: 7px;
 	left: 13px;
 }
-/* .contents .contents__money-box .contents__money-box__add {
-    border: 1px solid purple;
-	position: absolute;
-	right: 0px;
-	bottom: 12px;
-} */
 
 /* 입출금내역 */
 .contents .contents__history {
@@ -355,4 +357,3 @@ nav > a > img {
 	z-index: 10;
 }
 
-/* 입출금내역 슬라이더 */
