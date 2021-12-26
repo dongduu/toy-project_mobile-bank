@@ -20,7 +20,6 @@ body {
 	height: 812px;
 	background-color: #EEEBE5;
 	position: relative;
-	/* overflow: hidden; */
 }
 main {
 	position: relative;
@@ -126,9 +125,6 @@ nav > a > img {
 	border-radius: 12px;
 	margin-top: 33px;
 	position: relative;
-}
-.account .account__infor .account__infor-total .account__infor-box {
-	
 }
 .account .account__infor .account__infor-total .account__infor-box .account-num {
 	text-align: center;
@@ -293,12 +289,6 @@ nav > a > img {
 }
 
 /* 입출금내역 */
-.contents .contents__history {
-	
-}
-.contents .contents__history .contents__history__days {
-
-}
 .contents .contents__history .contents__history__days li {
 	margin: 0px 36px 36px 38px;
 }

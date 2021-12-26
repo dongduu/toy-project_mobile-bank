@@ -1,3 +1,55 @@
+// 슬라이더
+new Swiper('.wrap > main > section > .swiper-container', {
+    direction: 'vertical',
+    slidePerView: 1
+});
+
+// 올림 버튼
+const _slide = document.getElementById("account_");
+function slide_btn() {
+  if(_slide.style.display == 'block') {
+      _slide.style.display = 'none';
+  } else {
+      _slide.style.display = 'block';
+  }
+}
+
+// JSON section에 불러오기
+let start_x, end_x; 
+const sections = document.querySelectorAll('section');
+let urls = ["https://gyoheonlee.github.io/mobile-bank/data/bank-me.json", "https://gyoheonlee.github.io/mobile-bank/data/bank-mom.json"]
+sections.forEach((section, index)=>{
+  section.children[0].addEventListener('touchstart',slide_start);
+  section.children[0].addEventListener('touchend',(event)=>{ slide_end(event) });
+  fetch(urls[index])
+  .then(res => res.json())
+  .then(myjson => {printContents(myjson, section)});
+})
+
+// 좌우 슬라이드 함수
+function slide_start(e){
+  start_x = e.touches[0].pageX;
+}
+
+function slide_end(event){
+  end_x=event.changedTouches[0].pageX;
+  if(start_x > end_x + 100){
+    slideLeft();
+  } else if(start_x + 100 < end_x) {
+    slideRight();
+  }
+}
+
+function slideLeft(){
+  sections[0].style.left = '-375px';
+  sections[1].style.left = '0';
+}
+
+function slideRight(){
+  sections[0].style.left = '0';
+  sections[1].style.left = '+375px';
+}
+
 // 입출금 내역 불러오기
 function printContents (myjson, section) {
   const ulElem = section.querySelector('.contents__history__days');
@@ -58,54 +110,3 @@ function printContents (myjson, section) {
     }
   }
 }
-
-// 슬라이더
-new Swiper('.wrap > main > section > .swiper-container', {
-    direction: 'vertical',
-    slidePerView: 1
-});
-
-// 올림 버튼
-const _slide = document.getElementById("account_");
-function slide_btn() {
-  if(_slide.style.display == 'block') {
-      _slide.style.display = 'none';
-  } else {
-      _slide.style.display = 'block';
-  }
-}
-
-// JSON section에 불러오기
-let start_x, end_x; 
-const sections = document.querySelectorAll('section');
-let urls = ["https://gyoheonlee.github.io/mobile-bank/data/bank-me.json", "https://gyoheonlee.github.io/mobile-bank/data/bank-mom.json"]
-sections.forEach((section, index)=>{
-  section.children[0].addEventListener('touchstart',slide_start);
-  section.children[0].addEventListener('touchend',(event)=>{ slide_end(event) });
-  fetch(urls[index])
-  .then(res => res.json())
-  .then(myjson => {printContents(myjson, section)});
-})
-function slide_start(e){
-  start_x = e.touches[0].pageX;
-}
-
-function slide_end(event){
-  end_x=event.changedTouches[0].pageX;
-  if(start_x > end_x + 100){
-    slideLeft();
-  } else if(start_x + 100 < end_x) {
-    slideRight();
-  }
-}
-
-function slideLeft(){
-  sections[0].style.left = '-375px';
-  sections[1].style.left = '0';
-}
-
-function slideRight(){
-  sections[0].style.left = '0';
-  sections[1].style.left = '+375px';
-}
-
